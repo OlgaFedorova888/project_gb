@@ -1,0 +1,47 @@
+import Foundation
+
+// Задание 1 Написать функцию, которая определяет, четное число или нет
+
+
+func Even(a: Int) -> Bool {
+    return a % 2 == 0
+}
+
+
+// Задание 2 Написать функцию, которая определяет, делится ли число без остатка на 3
+
+func function (a: Int) -> Bool {
+return a % 3 == 0
+}
+
+// Задание 3 Создать возрастающий массив из 100 чисел
+func array1 (num1: Int, array2: Int) -> [Int] {
+var arr: [Int] = []
+for i in 0..<array2 {
+    arr.append(num1 + i)
+    }
+   return arr
+  
+}
+
+// Задание 4 Удалить из этого массива все четные числа и все числа, которые не делятся на 3
+var arr: [Int] = array1 (num1: 1, array2: 100)
+for index in stride(from: arr.count - 1, through: 0, by: -1) {
+    if !function(a: arr[index]) && Even(a: arr[index]) {
+        arr.remove(at: index)
+    }
+}
+
+// Задание 5 Написать функцию, которая добавляет в массив новое число Фибоначчи, и добавить при помощи нее 100 элементов
+func arrayFib() -> [Double] {
+    var arr: [Double] = [0, 1, 1]
+    for i in 2 ... 100 {
+        arr.append(arr[i] + arr [i - 1])
+    }
+    return arr
+}
+
+
+
+
+
